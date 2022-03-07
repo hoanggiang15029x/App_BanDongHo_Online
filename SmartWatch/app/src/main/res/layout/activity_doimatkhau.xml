@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background4">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/draLayout_trangChinh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_trangChinh"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/holo_blue_dark"
+                app:title="Đổi mật khẩu">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drawable_hinhtron"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/drawable_hinheclip"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/tv_sdt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:hint="Số điện thoại"
+                        android:layout_marginRight="20dp"
+                        android:maxLength="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/drawable_hinheclip"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/edt_mkcu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mật khẩu cũ"
+                        android:layout_marginRight="20dp"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/drawable_hinheclip"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/edt_mkmoi1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mật khẩu mới"
+                        android:layout_marginRight="20dp"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="@drawable/drawable_hinheclip"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/edt_mkmoi2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:hint="Xác nhận mật khẩu"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_xacnhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/drawable_hinheclip"
+                    android:backgroundTint="#2196F3"
+                    android:text="Xác nhận"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/naviView_trangChinh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+
+            <ListView
+                android:id="@+id/listView_trangChinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>
